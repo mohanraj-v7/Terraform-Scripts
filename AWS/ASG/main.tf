@@ -1,7 +1,7 @@
 provider "aws" {
   region     = var.region
 }
-
+/*
 resource "aws_launch_configuration" "launch_config" {
   name          = "web_config"
   image_id      = lookup(var.ami_id, var.region)
@@ -9,7 +9,7 @@ resource "aws_launch_configuration" "launch_config" {
   key_name      = var.key_name
   security_groups = [ var.security_grpup_id]
 }
-
+*/
 resource "aws_autoscaling_group" "example_autoscaling" {
   name                      = "autoscaling-terraform-test"
   max_size                  = 2
